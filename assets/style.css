@@ -1,0 +1,71 @@
+html {
+    margin: 0%;
+}
+
+.mostrador {
+    display: grid;
+    grid-template-areas: "aside content content content";
+    margin-top: 10px;
+    gap: 50px;
+}
+
+.products {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+.filters {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 10px;
+    border: 3px solid rgba(159, 153, 153, 0.968);
+}
+
+.filters > div {
+    flex-direction: column;
+}
+
+.mostrador > aside {
+    height: 250px;
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+      font-size: 14px;
+    }
+
+    .mostrador {
+        display: block;
+    }
+
+    .products {
+        display: block;
+    }
+
+    .products div {
+        display: block;
+        margin: 20px;
+    }
+
+    .filters {
+        display: block;
+    }
+
+    .carousel-indicators  {
+        position: unset;
+    }
+
+    .carousel-item .active {
+        height: 300px;
+    }
+
+    .w-100 {
+        height: 150px;
+    }
+
+  }
+
+
